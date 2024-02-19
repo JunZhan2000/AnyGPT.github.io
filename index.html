@@ -52,7 +52,7 @@
                                 style="margin-right: 20px;">
                             AnyGPT:
                         </h1>
-                        <h1 class="title is-2 publication-title">Any-to-Any Multimodal Large Language Model</h1>
+                        <h1 class="title is-2 publication-title" style="width:1200px">Unified Multimodal LLM with Discrete Sequence Modeling</h1>
                         <!-- <div class="is-size-5 publication-authors">
                             <span class="author-block">
                                 <a href="https://chocowu.github.io/">Shengqiong Wu</a>,</span>
@@ -77,8 +77,8 @@
                             <span class="author-block" style="font-size: 15px;">(<sup>*</sup>Correspondence)</span>
                         </div> -->
 
-                        <!-- <div class="column has-text-centered">
-                            <div class="publication-links">\
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
                                 <span class="link-block">
                                     <a href="https://arxiv.org/pdf/2309.05519.pdf"
                                         class="external-link button is-normal is-rounded is-dark">
@@ -89,7 +89,7 @@
                                     </a>
                                 </span>
 
-                                <span class="link-block">
+                                <!-- <span class="link-block">
                                     <a href="https://acc414b22d6839d28f.gradio.live" target="_blank"
                                         class="external-link button is-normal is-rounded is-dark">
                                         <span class="icon">
@@ -97,7 +97,7 @@
                                         </span>
                                         <span>Demo</span>
                                     </a>
-                                </span>
+                                </span> -->
 
                                 <span class="link-block">
                                     <a href="https://github.com/NExT-GPT/NExT-GPT"
@@ -130,15 +130,43 @@
                                     </a>
                                 </span>
 
+                                <span class="link-block">
+                                    <a href="https://www.youtube.com/watch?v=aqw2SCWeWD0"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <!-- <i class="fab fa-youtube"></i> -->
+                                            <img src="static/images/bilibili.svg" alt="Bilibili">
+                                        </span>
+                                        <span>Bilibili</span>
+                                    </a>
+                                </span>
+
 
                             </div>
 
-                        </div> -->
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <!-- Paper video. -->
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-full-width">
+                    <h2 class="title is-2">Video Presentation</h2>
+                    <div class="publication-video">
+                        <iframe src="https://www.youtube.com/embed/aqw2SCWeWD0?si=jIKgOkew2rmRROUy"
+                                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <!--/ Paper video. -->
+        </div>
+    </section>
+    
 
     <section class="section">
         <div class="container is-max-desktop">
@@ -150,7 +178,7 @@
                         <p>
                             We introduce AnyGPT, an any-to-any multimodal language model that utilizes discrete representations for the unified processing of various modalities, including speech, text, images, and music. 
                             AnyGPT can be trained stably without any alterations to the current large language model (LLM) architecture or training paradigms. Instead, it relies exclusively on data-level preprocessing, facilitating the seamless integration of new modalities into LLMs, akin to the incorporation of new languages.
-                            We build an multimodal text-centric dataset for multimodal alignment pretraining. Utilizing generative models, we synthesize the first large-scale any-to-any multimodal instruction dataset. It consists of 108k samples of multi-turn conversations that intricately interweave various modalities, thus equipping the model to handle arbitrary combinations of multimodal inputs and outputs.
+                            We build a multimodal text-centric dataset for multimodal alignment pre-training. Utilizing generative models, we synthesize the first large-scale any-to-any multimodal instruction dataset. It consists of 108k samples of multi-turn conversations that intricately interweave various modalities, thus equipping the model to handle arbitrary combinations of multimodal inputs and outputs.
                             Experimental results demonstrate that AnyGPT is capable of facilitating any-to-any multimodal conversation while achieving performance comparable to specialized models across all modalities, proving that discrete representations can effectively and conveniently unify multiple modalities within a language model.
                         </p>
                     </div>
@@ -181,7 +209,7 @@
                         <figcaption>
                             <p style="text-align: center;">
                                 <font color="061E61">
-                                    <b>Figure 1:</b> By connecting LLM
+                                    <b>Figure 1:</b> An overview of the AnyGPT model architecture. All modalities are tokenized into discrete tokens, upon which the LLM performs multimodal understanding and generation autoregressively. Only data pre-processing and post-processing are required, with the model's architecture and training objectives remaining unaltered.
                                 </font>
                             </p>
                         </figcaption>
@@ -204,7 +232,7 @@
             <!-- Instruction -->
             <div class="columns is-centered">
                 <div class="column is-full-width">
-                    <h2 class="title is-3">• AnyInstruct Dataset Synthesis</h2>
+                    <h2 class="title is-3">• AnyInstruct Dataset Synthesis Process</h2>
 
                     <div class="content has-text-justified">
                         <p>
@@ -217,8 +245,8 @@
                         <figcaption>
                             <p style="text-align: center;">
                                 <font color="061E61">
-                                    <b>Figure 4:</b> Two-stage Data Construction Process.
-
+                                    <b>Figure 4:</b> 
+                                    The construction process of the multimodal interleaved instruction dataset AnyInstruct is divided into two stages: Generation of text-based conversations incorporating multimodal elements and Text-to-Multimodality Conversion. The first stage generates topics, scenarios, and textual dialogues, while the second stage produces the final multimodal dialogues.
                                 </font>
                             </p>
                         </figcaption>
